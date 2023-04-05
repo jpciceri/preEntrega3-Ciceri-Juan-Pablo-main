@@ -78,7 +78,7 @@ var JPSeguros = function () {
             modeloImporte = 500;
         }
 
-        if (props.anio >= 2021) {
+        if (props.anio >= 2022) {
             fechaImporte = 800;
         } else if (props.anio >= 2013 && props.anio >= 2021) {
             fechaImporte = 400;
@@ -87,12 +87,12 @@ var JPSeguros = function () {
         }
 
         if (props.tipo === "basico") {
-            cantidad = 1.3;
+        cantidad = 1.3;
         } else {
             cantidad= 1.5;
         }          
 
-        let total = (marcaImporte + modeloImporte + fechaImporte) * cantidad;
+        let total = (importeBase + marcaImporte + modeloImporte + fechaImporte) * cantidad;
 
         const resultado = `
         Impuesto por Base: $ ${importeBase} <br/>
